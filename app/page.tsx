@@ -3,12 +3,14 @@ import Die from "@/components/Die";
 
 const SCORE_ROWS = [
   { label: "Entry fee", value: "$50", big: false },
-  { label: "Grand prize", value: "$2,000", big: true },
-  { label: "Format", value: "5-round Swiss, single elimination final" },
+  { label: "1st place", value: "$1,500", big: true },
+  { label: "2nd place", value: "$800", big: true },
+  { label: "3rd place", value: "$400", big: true },
+  { label: "Format", value: "PvP single elimination" },
   { label: "Date", value: "Saturday, September 12, 2026" },
   { label: "Check-in", value: "9:00 AM — rolling starts 10:00 AM sharp" },
   { label: "Venue", value: "Online — Yahtzee with Buddies app" },
-  { label: "Field size", value: "Capped at 50 players" },
+  { label: "Field size", value: "Capped at 64 players" },
 ];
 
 export default function Home() {
@@ -29,12 +31,12 @@ export default function Home() {
         <h1 className="font-display text-6xl md:text-8xl text-ivory leading-[0.95] tracking-wide">
           ROLL FOR
           <br />
-          $2,000
+          $2,700
         </h1>
         <p className="font-body text-ivory/80 max-w-xl mx-auto mt-6 text-lg leading-relaxed">
-          One entry fee. Five dice. Thirteen categories to fill. Fifty players chase
-          one grand prize — played online, head-to-head, right in the Yahtzee with
-          Buddies app.
+          One entry fee. Five dice. Thirteen categories to fill. Sixty-four players face
+          off head-to-head, single elimination, played online right in the Yahtzee with
+          Buddies app. Top 3 finishers split the pool: $1,500 / $800 / $400.
         </p>
         <Link
           href="/register"
