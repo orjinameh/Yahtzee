@@ -1,12 +1,3 @@
-const PIP_LAYOUTS: Record<number, number[]> = {
-  1: [5],
-  2: [1, 9],
-  3: [1, 5, 9],
-  4: [1, 3, 7, 9],
-  5: [1, 3, 5, 7, 9],
-  6: [1, 3, 4, 6, 7, 9],
-};
-
 export default function Die({
   value,
   size = 64,
@@ -20,17 +11,19 @@ export default function Die({
   delayMs?: number;
   bg?: string;
 }) {
-  const cells = PIP_LAYOUTS[value] ?? PIP_LAYOUTS[1];
   return (
     <div
-      className={`die shadow-die ${animate ? "die-roll" : ""}`}
+      className={`die shadow-die grid place-items-center ${animate ? "die-roll" : ""}`}
       style={{ width: size, height: size, background: bg, animationDelay: `${delayMs}ms` }}
       role="img"
       aria-label={`Die showing ${value}`}
     >
-      {Array.from({ length: 9 }, (_, i) => i + 1).map((cell) => (
-        <span key={cell} className="pip" style={{ opacity: cells.includes(cell) ? 1 : 0 }} />
-      ))}
+      <span
+        className="font-display text-pip leading-none select-none"
+        style={{ fontSize: size * 0.52 }}
+      >
+        {value}
+      </span>
     </div>
   );
 }
