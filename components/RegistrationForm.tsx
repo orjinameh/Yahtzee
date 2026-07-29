@@ -73,7 +73,7 @@ export default function RegistrationForm() {
     >
       <input type="hidden" name="to_email" value={ORGANIZER_EMAIL} />
       <input type="hidden" name="entry_fee" value="$50" />
-      <input type="hidden" name="prize_pool" value="$3,000" />
+      <input type="hidden" name="prize_pool" value="$2,000" />
 
       <h3 className="font-display text-3xl text-felt mb-6 tracking-wide">SCORE YOUR SEAT</h3>
 
@@ -81,6 +81,13 @@ export default function RegistrationForm() {
         <Field label="Full name" name="player_name" type="text" required autoComplete="name" />
         <Field label="Email" name="reply_to" type="email" required autoComplete="email" />
         <Field label="Phone" name="player_phone" type="tel" required autoComplete="tel" />
+        <Field
+          label="Yahtzee with Buddies username"
+          name="ywb_username"
+          type="text"
+          required
+          autoComplete="off"
+        />
 
         <label className="block">
           <span className="block font-mono text-sm uppercase tracking-widest text-graphite/70 mb-1">
