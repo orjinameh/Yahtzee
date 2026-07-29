@@ -3,12 +3,12 @@ import Die from "@/components/Die";
 
 const SCORE_ROWS = [
   { label: "Entry fee", value: "$50", big: false },
-  { label: "Grand prize", value: "$3,000", big: true },
+  { label: "Grand prize", value: "$2,000", big: true },
   { label: "Format", value: "5-round Swiss, single elimination final" },
   { label: "Date", value: "Saturday, September 12, 2026" },
   { label: "Check-in", value: "9:00 AM — rolling starts 10:00 AM sharp" },
-  { label: "Venue", value: "Fairview Community Hall, Lanes 1–8" },
-  { label: "Field size", value: "Capped at 64 players" },
+  { label: "Venue", value: "Online — Yahtzee with Buddies app" },
+  { label: "Field size", value: "Capped at 50 players" },
 ];
 
 export default function Home() {
@@ -18,10 +18,10 @@ export default function Home() {
       <section className="max-w-5xl mx-auto px-6 pt-20 pb-14 text-center">
         <div className="flex justify-center gap-4 mb-8">
           <Die value={5} size={64} animate delayMs={0} />
-          <Die value={3} size={64} animate delayMs={90} />
+          <Die value={5} size={64} animate delayMs={90} />
           <Die value={5} size={64} animate delayMs={180} />
           <Die value={5} size={64} animate delayMs={270} />
-          <Die value={5} size={64} animate delayMs={360} />
+          <Die value={6} size={64} animate delayMs={360} />
         </div>
         <p className="font-mono text-gold uppercase tracking-[0.3em] text-sm mb-4">
           The Boxcars Yahtzee Open
@@ -29,11 +29,12 @@ export default function Home() {
         <h1 className="font-display text-6xl md:text-8xl text-ivory leading-[0.95] tracking-wide">
           ROLL FOR
           <br />
-          $3,000
+          $2,000
         </h1>
         <p className="font-body text-ivory/80 max-w-xl mx-auto mt-6 text-lg leading-relaxed">
-          One entry fee. Five dice. Thirteen categories to fill. Sixty-four players chase
-          one grand prize — and it&apos;s decided the old-fashioned way, on paper scorecards.
+          One entry fee. Five dice. Thirteen categories to fill. Fifty players chase
+          one grand prize — played online, head-to-head, right in the Yahtzee with
+          Buddies app.
         </p>
         <Link
           href="/register"
