@@ -73,7 +73,9 @@ export default function RegistrationForm() {
     >
       <input type="hidden" name="to_email" value={ORGANIZER_EMAIL} />
       <input type="hidden" name="entry_fee" value="$50" />
-      <input type="hidden" name="prize_pool" value="$2,000" />
+      <input type="hidden" name="prize_1st" value="$1,500" />
+      <input type="hidden" name="prize_2nd" value="$800" />
+      <input type="hidden" name="prize_3rd" value="$400" />
 
       <h3 className="font-display text-3xl text-felt mb-6 tracking-wide">SCORE YOUR SEAT</h3>
 
